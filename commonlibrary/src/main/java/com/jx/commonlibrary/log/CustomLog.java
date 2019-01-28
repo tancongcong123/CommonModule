@@ -14,4 +14,9 @@ public class CustomLog {
             Log.d(tag, msg);
         }
     }
+    public static void d(String tag, String msg, Exception throwable){
+        if (BuildConfig.DEBUG){
+            Log.d(tag, msg, throwable);
+        }
+    }
 }
