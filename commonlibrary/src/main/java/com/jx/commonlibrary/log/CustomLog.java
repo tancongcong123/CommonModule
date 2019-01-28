@@ -4,6 +4,9 @@ import android.util.Log;
 
 import com.jx.commonlibrary.BuildConfig;
 
+/*
+
+ */
 public class CustomLog {
 
     public static void d(String tag, String msg){
