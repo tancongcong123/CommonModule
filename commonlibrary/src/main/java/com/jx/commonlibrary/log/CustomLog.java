@@ -1,0 +1,14 @@
+package com.jx.commonlibrary.log;
+
+import android.util.Log;
+
+import com.jx.commonlibrary.BuildConfig;
+
+public class CustomLog {
+
+    public static void d(String tag, String msg){
+        if (BuildConfig.DEBUG){
+            Log.d(tag, msg);
+        }
+    }
+}
