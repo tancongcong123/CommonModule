@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import com.jx.commonlibrary.R;
 
-import butterknife.ButterKnife;
-
 public class AdapterWrapper extends RecyclerView.Adapter {
 
     /** 线性 */
@@ -137,7 +135,6 @@ public class AdapterWrapper extends RecyclerView.Adapter {
 
         WrapperHolder(View itemView) {
             super(itemView);
-            ButterKnife.bind(this, itemView);
         }
     }
 }

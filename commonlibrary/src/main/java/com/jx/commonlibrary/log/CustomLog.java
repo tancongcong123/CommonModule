@@ -19,4 +19,26 @@ public class CustomLog {
             Log.d(tag, msg, throwable);
         }
     }
+
+    public static void i(String tag, String msg){
+        if (BuildConfig.DEBUG){
+            Log.d(tag, msg);
+        }
+    }
+    public static void i(String tag, String msg, Exception throwable){
+        if (BuildConfig.DEBUG){
+            Log.d(tag, msg, throwable);
+        }
+    }
+
+    public static void e(String tag, String msg){
+        if (BuildConfig.DEBUG){
+            Log.d(tag, msg);
+        }
+    }
+    public static void e(String tag, String msg, Exception throwable){
+        if (BuildConfig.DEBUG){
+            Log.d(tag, msg, throwable);
+        }
+    }
 }
