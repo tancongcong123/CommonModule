@@ -8,11 +8,19 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.jx.commonlibrary.common.CommonUtil;
 
 public abstract class BaseFragment<V, T extends BasePresenter<V>> extends Fragment implements BaseView{
 
     private T mPresenter;
     private Context context;
+
+    public View getRootView() {
+        return rootView;
+    }
+
     private View rootView;
 
     public abstract T createPresenter();
@@ -67,6 +75,8 @@ public abstract class BaseFragment<V, T extends BasePresenter<V>> extends Fragme
 
     @Override
     public void showToast(String msg) {
-
+        if (!CommonUtil.isEmpty(msg)){
+            Toast.makeText(getActivity() ,msg,Toast.LENGTH_SHORT).show();
+        }
     }
 }
