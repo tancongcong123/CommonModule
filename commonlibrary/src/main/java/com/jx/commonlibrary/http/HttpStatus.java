@@ -31,11 +31,11 @@ public class HttpStatus {
         if (isLoginOut()){
             return false;
         }
-        return mCode != 0;
+        return mCode != HttpCode.getInstance().getSuccessCode();
     }
 
     public boolean isLoginOut(){
-        return (mCode == 301 || mCode == 300);
+        return (mCode == HttpCode.getInstance().getLoginErrorCode() || mCode == HttpCode.getInstance().getLogoutCode());
     }
 
 }
