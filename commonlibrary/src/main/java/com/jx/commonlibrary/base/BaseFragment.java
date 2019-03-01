@@ -14,7 +14,7 @@ import com.jx.commonlibrary.common.CommonUtil;
 
 public abstract class BaseFragment<V, T extends BasePresenter<V>> extends Fragment implements BaseView{
 
-    private T mPresenter;
+    public T mPresenter;
     private Context context;
 
     public View getRootView() {
