@@ -1,7 +1,6 @@
 package com.jx.commonlibrary.http;
 
 import com.google.gson.annotations.SerializedName;
-import com.jx.commonlibrary.common.CommonUtil;
 
 /**
  * Created by AX on 2017/10/25.
@@ -10,17 +9,15 @@ import com.jx.commonlibrary.common.CommonUtil;
 public class HttpStatus{
     @SerializedName("code")
     private int mCode;
-    @SerializedName("error")
+    @SerializedName(value = "error", alternate = "message")
     private String mError;
-    @SerializedName("message")
-    private String message;
 
     public int getCode() {
         return mCode;
     }
 
     public String getmError() {
-        return CommonUtil.isEmpty(message)?mError:message;
+        return mError;
     }
 
     /**
