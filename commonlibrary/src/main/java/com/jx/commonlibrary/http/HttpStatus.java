@@ -1,23 +1,26 @@
 package com.jx.commonlibrary.http;
 
 import com.google.gson.annotations.SerializedName;
+import com.jx.commonlibrary.common.CommonUtil;
 
 /**
  * Created by AX on 2017/10/25.
  */
 
-public class HttpStatus {
+public class HttpStatus{
     @SerializedName("code")
     private int mCode;
     @SerializedName("error")
     private String mError;
+    @SerializedName("message")
+    private String message;
 
     public int getCode() {
         return mCode;
     }
 
     public String getmError() {
-        return mError;
+        return CommonUtil.isEmpty(message)?mError:message;
     }
 
     /**
