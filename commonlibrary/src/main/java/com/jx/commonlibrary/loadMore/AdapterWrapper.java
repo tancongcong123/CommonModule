@@ -123,6 +123,8 @@ public class AdapterWrapper extends RecyclerView.Adapter {
             }else if(status == SwipeToLoadMore.STATUS_LOADING_DONE){
                 tvDefaultLoad.setText("没有了");
                 tvDefaultLoad.setVisibility(View.VISIBLE);
+            }else if(status == SwipeToLoadMore.STATUS_LOADING_GONE_DONE){
+                tvDefaultLoad.setVisibility(View.GONE);
             }else {
                 tvDefaultLoad.setVisibility(View.GONE);
             }

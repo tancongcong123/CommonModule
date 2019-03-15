@@ -12,6 +12,7 @@ public class SwipeToLoadMore extends RecyclerView.OnScrollListener {
     public static final int STATUS_LOADING_ERROR=1;
     public static final int STATUS_LOADING_DONE=2;
     public static final int STATUS_LOADING_GONE=3;
+    public static final int STATUS_LOADING_GONE_DONE=4;
     private int currentStatus;
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -36,7 +37,7 @@ public class SwipeToLoadMore extends RecyclerView.OnScrollListener {
     }
 
     private boolean isCanLoad(){
-        return currentStatus != STATUS_LOADING_DONE;
+        return currentStatus != STATUS_LOADING_DONE && currentStatus != STATUS_LOADING_GONE_DONE;
     }
 
     @Override
