@@ -1,13 +1,7 @@
 package com.jx.commonlibrary.adapter;
 
-public class BaseBean {
-    private int layoutType;
+public abstract class BaseBean {
 
-    public int getLayoutType() {
-        return layoutType;
-    }
+    public abstract int getLayoutType();
 
-    public void setLayoutType(int layoutType) {
-        this.layoutType = layoutType;
-    }
 }
